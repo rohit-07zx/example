@@ -1,0 +1,29 @@
+openapi: 3.0.0
+definition:
+  title: Sample API
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+servers:
+  - url: http://localhost:3000
+    description: Optional server description, e.g. Main (production) server
+
+paths:
+  /users:
+    post:
+      summary: Creates a user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                baseUrl:
+                  type: string
+                terms:
+                  type: integer
+                staringPoint:
+                  type: interger
+      responses:
+        "201":
+          description: Created
